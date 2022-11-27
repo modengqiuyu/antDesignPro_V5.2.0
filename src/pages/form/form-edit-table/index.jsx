@@ -134,7 +134,7 @@ const Equipment = (props) => {
     }
 
     return (
-        <PageContainer content="两级动态表单的实现。">
+        <PageContainer content="动态表单级联可编辑单元格表格的实现。">
             {/* <div style={{ maxHeight: '60vh', overflowY: 'auto', marginBottom: '20px' }}> */}
             <div style={{ overflowY: 'auto', marginBottom: '20px' }}>
 
@@ -149,7 +149,7 @@ const Equipment = (props) => {
 
                                             <>
                                                 <Row style={{ marginLeft: 20 }}>
-                                                    <Col span={6}>
+                                                    <Col span={8}>
 
                                                         <Form.Item
                                                             {...restField}
@@ -169,7 +169,9 @@ const Equipment = (props) => {
                                                             </Select>
                                                         </Form.Item>
                                                     </Col>
-                                                    <Col span={8}>
+                                                    <Col span={1}>
+                                                    </Col>
+                                                    <Col span={10}>
                                                         <Form.Item
                                                             {...restField}
                                                             name={[name, 'zblxmc']}
@@ -201,7 +203,7 @@ const Equipment = (props) => {
 
                                         ))}
                                         <Form.Item>
-                                            <Button style={{ marginTop: 5, width: 600, marginLeft: 200 }} type="dashed" onClick={() => {
+                                            <Button style={{ marginTop: 5, width: 600, marginLeft: 100 }} type="dashed" onClick={() => {
                                                 add()
                                                 addFirst()
                                             }

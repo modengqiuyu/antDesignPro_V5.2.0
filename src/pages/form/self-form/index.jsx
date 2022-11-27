@@ -120,8 +120,7 @@ const Equipment = (props) => {
 
                       <>
                         <Row style={{ marginLeft: 20 }}>
-                          <Col span={6}>
-
+                          <Col span={10}>
                             <Form.Item
                               {...restField}
                               name={[name, 'troop']}
@@ -140,7 +139,9 @@ const Equipment = (props) => {
                               </Select>
                             </Form.Item>
                           </Col>
-                          <Col span={8}>
+                          <Col span={2}>
+                          </Col>
+                          <Col span={10}>
                             <Form.Item
                               {...restField}
                               name={[name, 'zblxmc']}
@@ -180,7 +181,7 @@ const Equipment = (props) => {
                 </>
               )}
             </Form.List>
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+            <Form.Item wrapperCol={{ offset: 10, span: 14 }}>
               <Button type="primary" htmlType="submit">
                 提交
               </Button>

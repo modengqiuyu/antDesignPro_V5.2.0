@@ -79,23 +79,7 @@ const EditableCell = ({
 };
 const editTable = (props) => {
     const { form, dataSource, name } = props
-    // const [dataSource, setDataSource] = useState([
-    //     {
-    //         key: '0',
-    //         name: 'Edward King 0',
-    //         age: '32',
-    //         address: 'London, Park Lane no. 0',
-    //     },
-    //     {
-    //         key: '1',
-    //         name: 'Edward King 1',
-    //         age: '32',
-    //         address: 'London, Park Lane no. 1',
-    //     },
-    // ]);
     const [count, setCount] = useState(dataSource?.length + 1);
-
-
     useEffect(() => {
         setCount(dataSource?.length + 1)
     }, [dataSource])
@@ -119,26 +103,31 @@ const editTable = (props) => {
             dataIndex: 'secondName',
             width: 300,
             editable: true,
+            align: 'center'
         },
         {
             title: '携带数',
             dataIndex: 'xds',
             width: 200,
             editable: true,
+            align: 'center'
         },
         {
             title: '数量单位',
             dataIndex: 'zbdw',
             width: 200,
             editable: true,
+            align: 'center'
         },
         {
-            title: 'operation',
+            title: '操作',
             dataIndex: 'operation',
+            align: 'center',
+            width: 80,
             render: (_, record) =>
                 dataSource.length >= 1 ? (
                     <Popconfirm title="确定删除？" onConfirm={() => handleDelete(record.secondName)}>
-                        <a>Delete</a>
+                        <a>删除</a>
                     </Popconfirm>
                 ) : null,
         },
@@ -151,7 +140,6 @@ const editTable = (props) => {
             key: count
         };
         const newSecondDataArray = [...dataSource, newData]
-        // setCount(count + 1);
         console.log('form', form.getFieldsValue(true))
         console.log('name', name)
         console.log('newSecondDataArray', newSecondDataArray)
